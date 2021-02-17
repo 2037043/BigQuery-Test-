@@ -1,0 +1,81 @@
+SELECT
+  DISTINCT country_region,
+FROM
+  `bigquery-public-data.covid19_jhu_csse.summary`
+LIMIT
+  10
+  
+  SELECT
+  country_region , count(*)
+FROM
+  `bigquery-public-data.covid19_jhu_csse.summary`
+group by country_region
+
+SELECT
+  combined_key,
+  COUNT(*)
+FROM
+  `bigquery-public-data.covid19_jhu_csse.summary`
+GROUP BY
+  combined_key
+  
+  SELECT
+  country_region
+FROM
+  `bigquery-public-data.covid19_jhu_csse.summary`
+WHERE
+  longitude BETWEEN 31.87934684
+  AND 43.8370751
+  
+  SELECT
+  count(province_state)
+FROM
+  `bigquery-public-data.covid19_jhu_csse.summary`
+WHERE latitude=44.46322849
+AND longitude=-73.08359212
+
+SELECT
+  SUM(confirmed)
+FROM
+  `bigquery-public-data.covid19_jhu_csse.summary`
+LIMIT
+  100
+  
+  SELECT
+  AVG(deaths)
+FROM
+  `bigquery-public-data.covid19_jhu_csse.summary`
+LIMIT
+  10
+  
+  SELECT
+  longitude ,COUNT(*)
+FROM
+  `bigquery-public-data.covid19_jhu_csse.summary`
+GROUP BY
+  longitude
+HAVING
+  COUNT(*) > -73.08359212
+  
+  SELECT
+  COUNT(recovered)
+FROM
+  `bigquery-public-data.covid19_jhu_csse.summary`
+WHERE province_state="Arizona"
+
+SELECT
+  country_region,
+FROM
+  `bigquery-public-data.covid19_jhu_csse.summary`
+WHERE
+  country_region LIKE
+  'us%'
+LIMIT
+  10
+  
+  SELECT
+  MAX (deaths)
+FROM
+  `bigquery-public-data.covid19_jhu_csse.summary`
+LIMIT
+  100
